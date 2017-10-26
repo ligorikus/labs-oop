@@ -19,6 +19,15 @@ public class Text {
 	
 	public void clear()
 	{
-		//TODO: clear this.text
+		String result = ""; 
+		char symbol;
+		for (int i = 0; i < text.length(); i++) {
+			symbol = this.text.charAt(i);
+			if(symbol >= 'a' && symbol <= 'z' || symbol >= 'à' && symbol <= 'ÿ' || symbol == ' ')
+			{
+				result += symbol;
+			}
+		}
+		this.text = result;
 	}
 }
