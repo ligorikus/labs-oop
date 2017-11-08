@@ -33,7 +33,7 @@ public class Lab1Tests {
 	}
 	
 	@Test
-	public void test() {
+	public void testClear() {
 		Text text = new Text();
 		text.init(this.init);
 		text.clear();
