@@ -54,22 +54,23 @@ public class Complex {
 		throw new Exception();
 	}
 	
-	public double exponentiation(int n)
+	public Complex exponentiation(int n)
 	{
 		if(n == 0)
 		{
-			return 1;
+			return new Complex(1,0);
 		}
 		try {
-			double absoluteInExp = Math.pow(this.absoluteValueOfNumber(), n);
+			double absInExp = Math.pow(this.absoluteValueOfNumber(), n);
 			double realCos = Math.cos(n * this.argument());
 			double realSin = Math.sin(n * this.argument());
-			System.out.println(absoluteInExp + "(" + realCos + " + " + realSin + "i");
+			
+			return new Complex(absInExp*realCos, absInExp*realSin);
 		} catch (Exception e) {
 			System.err.println("Error in calculate exponent of complex number");
 		}
 		
-		return 0;
+		return new Complex(0,0);
 	}
 	
 	public void print()

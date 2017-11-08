@@ -2,32 +2,23 @@ package lab2;
 
 public class Calculator {
 	
-	Complex first;
-	Complex second;
-	
-	public Calculator(Complex first, Complex second)
+	public static Complex addition(Complex first, Complex second)
 	{
-		this.first  = first;
-		this.second = second;
-	}
-	
-	public Complex addition()
-	{
-		double real = this.first.getReal() + this.second.getReal();
-		double imaginary = this.first.getImaginary() + this.second.getImaginary();
+		double real = first.getReal() + second.getReal();
+		double imaginary = first.getImaginary() + second.getImaginary();
 		
 		return new Complex(real, imaginary);
 	}
 
-	public Complex subtraction()
+	public static Complex subtraction(Complex first, Complex second)
 	{
-		double real = this.first.getReal() - this.second.getReal();
-		double imaginary = this.first.getImaginary() - this.second.getImaginary();
+		double real = first.getReal() - second.getReal();
+		double imaginary = first.getImaginary() - second.getImaginary();
 		
 		return new Complex(real, imaginary);
 	}
 	
-	public Complex multiplication()
+	public static Complex multiplication(Complex first, Complex second)
 	{
 		double real = first.getReal()*second.getReal() - first.getImaginary()*second.getImaginary();
 		double imaginary = first.getReal()*second.getImaginary() + first.getImaginary()*second.getReal();
@@ -35,7 +26,7 @@ public class Calculator {
 		return new Complex(real, imaginary);
 	}
 
-	public Complex division()
+	public Complex division(Complex first, Complex second)
 	{
 		double real = (first.getReal()*second.getReal() - first.getImaginary()*second.getImaginary())
 				/ (Math.pow(second.getReal(), 2) + Math.pow(second.getImaginary(), 2));
