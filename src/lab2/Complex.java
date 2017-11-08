@@ -2,10 +2,18 @@ package lab2;
 
 public class Complex {
 	
-	private float real;
-	private float imaginary;
+	private double real;
+	private double imaginary;
 	
-	public Complex(float real, float imaginary)
+	public double getReal() {
+		return real;
+	}
+
+	public double getImaginary() {
+		return imaginary;
+	}
+
+	public Complex(double real, double imaginary)
 	{
 		this.real = real;
 		this.imaginary = imaginary;
@@ -42,17 +50,31 @@ public class Complex {
 		{
 			return (3*Math.PI/2);
 		}
-		throw new Exception("Invalid complex number");
+		
+		throw new Exception();
 	}
 	
-	public float exponentiation()
+	public double exponentiation(int n)
 	{
+		if(n == 0)
+		{
+			return 1;
+		}
+		try {
+			double absoluteInExp = Math.pow(this.absoluteValueOfNumber(), n);
+			double realCos = Math.cos(n * this.argument());
+			double realSin = Math.sin(n * this.argument());
+			System.out.println(absoluteInExp + "(" + realCos + " + " + realSin + "i");
+		} catch (Exception e) {
+			System.err.println("Error in calculate exponent of complex number");
+		}
+		
 		return 0;
 	}
 	
 	public void print()
 	{
-		
+		System.out.println(this.real + " + " + this.imaginary + "i");
 	}
 }              
                
