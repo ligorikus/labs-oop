@@ -2,7 +2,7 @@ package lab2;
 
 public class Function {
 
-	public double function(Complex first, Complex second, Complex third)
+	public double func(Complex first, Complex second, Complex third)
 	{
 		Complex secondIn4pow = second.exponentiation(4);
 		Complex resultOfDivision = Calculator.division( Calculator.subtraction(first, second),
