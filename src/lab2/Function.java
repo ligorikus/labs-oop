@@ -2,8 +2,14 @@ package lab2;
 
 public class Function {
 
-	public double function(Complex a1, Complex a2, Complex a3)
+	public double function(Complex first, Complex second, Complex third)
 	{
-		return 0;
+		Complex secondIn4pow = second.exponentiation(4);
+		Complex resultOfDivision = Calculator.division( Calculator.subtraction(first, second),
+				Calculator.multiplication(third, first)
+			);
+		Complex result = Calculator.addition(secondIn4pow, resultOfDivision);
+		
+		return result.absoluteValueOfNumber();
 	}
 }

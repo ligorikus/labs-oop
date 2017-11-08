@@ -26,7 +26,7 @@ public class Calculator {
 		return new Complex(real, imaginary);
 	}
 
-	public Complex division(Complex first, Complex second)
+	public static Complex division(Complex first, Complex second)
 	{
 		double real = (first.getReal()*second.getReal() - first.getImaginary()*second.getImaginary())
 				/ (Math.pow(second.getReal(), 2) + Math.pow(second.getImaginary(), 2));
