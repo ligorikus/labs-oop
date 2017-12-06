@@ -10,6 +10,6 @@ public class Function {
 			);
 		Complex result = Calculator.addition(secondIn4pow, resultOfDivision);
 		
-		return result.absoluteValueOfNumber();
+		return Math.round(result.absoluteValueOfNumber()*100.0)/100.0;
 	}
 }
