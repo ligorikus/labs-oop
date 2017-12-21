@@ -57,11 +57,8 @@ public class MathComplexTest {
 	
 	@Test
 	public void testAddition() {
-		assertTrue(Complex.equals(
-				Calculator.addition(first, second),
-				addition
-			)
-		);
+		Complex result = Calculator.addition(first, second); 
+		assertTrue(Complex.equals(result, addition));
 	}
 	
 	@Test

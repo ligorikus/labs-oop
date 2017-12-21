@@ -1,14 +1,18 @@
 package tests;
 
-import static org.junit.Assert.*;
+import org.junit.runner.RunWith;
+import org.junit.runners.Suite;
+import org.junit.runners.Suite.SuiteClasses;
 
-import org.junit.Test;
+import tests.lab3tests.*;
 
+@RunWith(Suite.class)
+@SuiteClasses(
+		{
+			EquilateralTriangleTest.class,
+			ShowTest.class,
+			TriangleTest.class
+		}
+	)
 public class Lab3Tests {
-
-	@Test
-	public void test() {
-		fail("Not yet implemented");
-	}
-
 }

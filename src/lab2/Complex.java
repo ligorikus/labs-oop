@@ -79,8 +79,7 @@ public class Complex{
 	 */
 	public Complex exponentiation(int n)
 	{
-		if(n == 0)
-		{
+		if(n == 0){
 			return new Complex(1,0);
 		}
 		try {
@@ -132,7 +131,7 @@ public class Complex{
 	    }
 	}
 	
-	public static boolean equals(Object first, Object second)
+	public static boolean equals(Complex first, Complex second)
 	{
 		if(first == second)
 	    	return true;
@@ -145,10 +144,14 @@ public class Complex{
 	    Complex tmpFirst = (Complex)first;
 	    Complex tmpSecond = (Complex)second;
 	    boolean status = true;
-	    if(Math.round(tmpFirst.real*100) != Math.round(tmpSecond.real*100))
+	    if(Math.round(tmpFirst.real*100) != Math.round(tmpSecond.real*100)){
 	    	status = false;
-	    if(Math.round(tmpFirst.imaginary*100) != Math.round(tmpSecond.imaginary*100))
+	    }
+	    
+	    if(Math.round(tmpFirst.imaginary*100) != Math.round(tmpSecond.imaginary*100)){
 	    	status = false;
+	    }
+	    	
 	    return status;
 
 	}
